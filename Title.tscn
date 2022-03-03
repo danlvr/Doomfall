@@ -1,0 +1,323 @@
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://Assets/Warrior/Individual Sprite/Dash/Warrior_Dash_3.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Warrior/Individual Sprite/Dash/Warrior_Dash_4.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Warrior/Individual Sprite/Dash/Warrior_Dash_2.png" type="Texture" id=3]
+[ext_resource path="res://Assets/fonts/Fruktur-Regular.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://Assets/Warrior/Individual Sprite/Dash/Warrior_Dash_1.png" type="Texture" id=5]
+[ext_resource path="res://Assets/fonts/BalsamiqSans-Bold.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://Assets/UI/grey_button13.png" type="Texture" id=7]
+[ext_resource path="res://Assets/UI/grey_button04.png" type="Texture" id=8]
+[ext_resource path="res://Title.gd" type="Script" id=9]
+[ext_resource path="res://Assets/music/StartScreen.mp3" type="AudioStream" id=10]
+[ext_resource path="res://Assets/CountryVillage/2_Parallax background/Country.png" type="Texture" id=17]
+
+[sub_resource type="DynamicFont" id=1]
+size = 200
+font_data = ExtResource( 4 )
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 5 ), ExtResource( 3 ), ExtResource( 1 ), ExtResource( 2 ) ],
+"loop": true,
+"name": "default",
+"speed": 10.0
+} ]
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0, 0, 0, 0 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color( 0, 0, 0, 0.172549 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 40
+font_data = ExtResource( 6 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 28
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 19
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 25
+font_data = ExtResource( 6 )
+
+[node name="Title" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Country" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0.313726 )
+position = Vector2( 268.311, 289.318 )
+scale = Vector2( 5.26922, 5.26922 )
+texture = ExtResource( 17 )
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -410.0
+margin_top = 24.0
+margin_right = 410.0
+margin_bottom = 275.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Doomfall"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="Player" type="AnimatedSprite" parent="."]
+position = Vector2( 790.691, 566.434 )
+scale = Vector2( 3, 3 )
+frames = SubResource( 2 )
+frame = 1
+playing = true
+
+[node name="Panel" type="Panel" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -169.5
+margin_top = -64.0
+margin_right = 169.5
+margin_bottom = 112.0
+custom_styles/panel = SubResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Start" type="Button" parent="Panel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -115.0
+margin_top = -63.0
+margin_right = 115.0
+margin_bottom = -7.0
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Panel/Start"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -104.5
+margin_top = -24.0
+margin_right = 104.5
+margin_bottom = 24.0
+custom_fonts/font = SubResource( 4 )
+text = "Start Game"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Start2" type="Button" parent="Panel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -115.0
+margin_top = 1.0
+margin_right = 115.0
+margin_bottom = 57.0
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Panel/Start2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -104.5
+margin_top = -24.0
+margin_right = 104.5
+margin_bottom = 24.0
+custom_fonts/font = SubResource( 4 )
+text = "Quit Game"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel2" type="Panel" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -209.5
+margin_top = 136.0
+margin_right = 129.5
+margin_bottom = 312.0
+custom_styles/panel = SubResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SPACE" type="Sprite" parent="Panel2"]
+position = Vector2( 109.506, 89.8843 )
+scale = Vector2( 0.617482, 0.617482 )
+texture = ExtResource( 8 )
+
+[node name="Label2" type="Label" parent="Panel2/SPACE"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -138.5
+margin_top = -54.0
+margin_right = -51.5
+margin_bottom = 17.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 6 )
+text = "SPACE"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CTRL" type="Sprite" parent="Panel2"]
+position = Vector2( 110.392, 134.897 )
+scale = Vector2( 0.321549, 0.618055 )
+texture = ExtResource( 8 )
+
+[node name="CTRL2" type="Label" parent="Panel2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -92.0
+margin_top = 30.0
+margin_right = -23.0
+margin_bottom = 64.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 7 )
+text = "CTRL"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ARROWRIGHT3" type="Sprite" parent="Panel2"]
+position = Vector2( 132.068, 45.6831 )
+rotation = 1.5708
+scale = Vector2( 0.595483, 0.595483 )
+texture = ExtResource( 7 )
+
+[node name="ARROWRIGHT4" type="Sprite" parent="Panel2"]
+position = Vector2( 92.0685, 45.6831 )
+rotation = -1.5708
+scale = Vector2( 0.595483, 0.595483 )
+texture = ExtResource( 7 )
+
+[node name="A" type="Label" parent="Panel2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -112.0
+margin_top = -58.0
+margin_right = -43.0
+margin_bottom = -24.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 7 )
+text = "A"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="D" type="Label" parent="Panel2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -72.0
+margin_top = -58.0
+margin_right = -3.0
+margin_bottom = -24.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 7 )
+text = "D"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="move" type="Label" parent="Panel2"]
+margin_left = 168.167
+margin_top = 29.4027
+margin_right = 267.167
+margin_bottom = 60.4027
+custom_fonts/font = SubResource( 8 )
+text = "=   move"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="jump" type="Label" parent="Panel2"]
+margin_left = 193.167
+margin_top = 73.4027
+margin_right = 287.167
+margin_bottom = 104.403
+custom_fonts/font = SubResource( 8 )
+text = "=   jump"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="attack" type="Label" parent="Panel2"]
+margin_left = 162.167
+margin_top = 120.403
+margin_right = 271.167
+margin_bottom = 151.403
+custom_fonts/font = SubResource( 8 )
+text = "=   attack"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+autoplay = true
+
+[connection signal="pressed" from="Panel/Start" to="." method="_on_Start_pressed"]
+[connection signal="pressed" from="Panel/Start2" to="." method="_on_Start2_pressed"]

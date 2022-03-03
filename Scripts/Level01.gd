@@ -19,7 +19,7 @@ func _on_Start2_pressed():
 
 # GameOver screen Restart Level
 func _on_Start_pressed():
-	get_tree().change_scene("res://Level01.tscn")
+	get_tree().change_scene("res://Scenes/Level01.tscn")
 
 # When the player enters the portal to the next level
 func _on_Area2D_body_entered(body):
@@ -30,7 +30,7 @@ func _on_Area2D_body_entered(body):
 
 # Change scene after the portal animation
 func _on_LevelTransition_animation_finished(anim_name):
-	get_tree().change_scene("res://Level02.tscn")
+	get_tree().change_scene("res://Scenes/Level02.tscn")
 
 # After the portal animation has finished restore player controls
 func _on_AnimationPlayer_animation_finished(anim_name):

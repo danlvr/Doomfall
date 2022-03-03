@@ -3,7 +3,7 @@
 extends Node2D
 
 # Boss preload and instance
-var Boss = preload("res://Boss.tscn")
+var Boss = preload("res://Scenes/Boss.tscn")
 var boss = Boss.instance()
 
 func _ready():
@@ -22,7 +22,7 @@ func _on_Start2_pressed():
 
 # GameOver screen Restart Level
 func _on_Start_pressed():
-	get_tree().change_scene("res://Level02.tscn")
+	get_tree().change_scene("res://Scenes/Level02.tscn")
 
 # When the boss spawned, cast spell and connect boss death signal to the instance
 func _on_HUD_somethingis():
@@ -50,4 +50,4 @@ func _on_Boss_died():
 
 # After the boss is defeated go to the end screen
 func _on_EndTimer_timeout():
-	get_tree().change_scene("res://End.tscn")
+	get_tree().change_scene("res://Scenes/End.tscn")

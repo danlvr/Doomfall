@@ -11,7 +11,7 @@ config_version=4
 [application]
 
 config/name="Doomfall"
-run/main_scene="res://Title.tscn"
+run/main_scene="res://Scenes/Title.tscn"
 boot_splash/image="res://Assets/Load.png"
 config/icon="res://icon.png"
 

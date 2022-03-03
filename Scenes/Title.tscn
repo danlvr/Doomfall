@@ -1,24 +1,24 @@
 [gd_scene load_steps=20 format=2]
 
-[ext_resource path="res://Assets/Warrior/Individual Sprite/Dash/Warrior_Dash_3.png" type="Texture" id=1]
-[ext_resource path="res://Assets/Warrior/Individual Sprite/Dash/Warrior_Dash_4.png" type="Texture" id=2]
-[ext_resource path="res://Assets/Warrior/Individual Sprite/Dash/Warrior_Dash_2.png" type="Texture" id=3]
-[ext_resource path="res://Assets/fonts/Fruktur-Regular.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://Assets/fonts/BalsamiqSans-Bold.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Assets/fonts/Fruktur-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Assets/music/StartScreen.mp3" type="AudioStream" id=3]
+[ext_resource path="res://Assets/UI/grey_button04.png" type="Texture" id=4]
 [ext_resource path="res://Assets/Warrior/Individual Sprite/Dash/Warrior_Dash_1.png" type="Texture" id=5]
-[ext_resource path="res://Assets/fonts/BalsamiqSans-Bold.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://Assets/Warrior/Individual Sprite/Dash/Warrior_Dash_3.png" type="Texture" id=6]
 [ext_resource path="res://Assets/UI/grey_button13.png" type="Texture" id=7]
-[ext_resource path="res://Assets/UI/grey_button04.png" type="Texture" id=8]
-[ext_resource path="res://Title.gd" type="Script" id=9]
-[ext_resource path="res://Assets/music/StartScreen.mp3" type="AudioStream" id=10]
-[ext_resource path="res://Assets/CountryVillage/2_Parallax background/Country.png" type="Texture" id=17]
+[ext_resource path="res://Assets/CountryVillage/2_Parallax background/Country.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Warrior/Individual Sprite/Dash/Warrior_Dash_4.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Warrior/Individual Sprite/Dash/Warrior_Dash_2.png" type="Texture" id=10]
+[ext_resource path="res://Scripts/Title.gd" type="Script" id=11]
 
 [sub_resource type="DynamicFont" id=1]
 size = 200
-font_data = ExtResource( 4 )
+font_data = ExtResource( 2 )
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
-"frames": [ ExtResource( 5 ), ExtResource( 3 ), ExtResource( 1 ), ExtResource( 2 ) ],
+"frames": [ ExtResource( 5 ), ExtResource( 10 ), ExtResource( 6 ), ExtResource( 9 ) ],
 "loop": true,
 "name": "default",
 "speed": 10.0
@@ -34,30 +34,27 @@ shadow_color = Color( 0, 0, 0, 0.172549 )
 
 [sub_resource type="DynamicFont" id=4]
 size = 40
-font_data = ExtResource( 6 )
+font_data = ExtResource( 1 )
 
 [sub_resource type="StyleBoxFlat" id=5]
 bg_color = Color( 0.6, 0.6, 0.6, 0 )
 
 [sub_resource type="DynamicFont" id=6]
 size = 28
-font_data = ExtResource( 6 )
+font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=7]
 size = 19
-font_data = ExtResource( 6 )
+font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=8]
 size = 25
-font_data = ExtResource( 6 )
+font_data = ExtResource( 1 )
 
 [node name="Title" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-script = ExtResource( 9 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+script = ExtResource( 11 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchor_right = 1.0
@@ -71,7 +68,7 @@ __meta__ = {
 modulate = Color( 1, 1, 1, 0.313726 )
 position = Vector2( 268.311, 289.318 )
 scale = Vector2( 5.26922, 5.26922 )
-texture = ExtResource( 17 )
+texture = ExtResource( 8 )
 
 [node name="Label" type="Label" parent="."]
 anchor_left = 0.5
@@ -95,7 +92,7 @@ __meta__ = {
 position = Vector2( 790.691, 566.434 )
 scale = Vector2( 3, 3 )
 frames = SubResource( 2 )
-frame = 1
+frame = 3
 playing = true
 
 [node name="Panel" type="Panel" parent="."]
@@ -191,7 +188,7 @@ __meta__ = {
 [node name="SPACE" type="Sprite" parent="Panel2"]
 position = Vector2( 109.506, 89.8843 )
 scale = Vector2( 0.617482, 0.617482 )
-texture = ExtResource( 8 )
+texture = ExtResource( 4 )
 
 [node name="Label2" type="Label" parent="Panel2/SPACE"]
 anchor_left = 0.5
@@ -214,7 +211,7 @@ __meta__ = {
 [node name="CTRL" type="Sprite" parent="Panel2"]
 position = Vector2( 110.392, 134.897 )
 scale = Vector2( 0.321549, 0.618055 )
-texture = ExtResource( 8 )
+texture = ExtResource( 4 )
 
 [node name="CTRL2" type="Label" parent="Panel2"]
 anchor_left = 0.5
@@ -316,7 +313,7 @@ __meta__ = {
 }
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 10 )
+stream = ExtResource( 3 )
 autoplay = true
 
 [connection signal="pressed" from="Panel/Start" to="." method="_on_Start_pressed"]

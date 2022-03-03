@@ -6,7 +6,7 @@
 [ext_resource path="res://Assets/Skeleton Sprite Pack/Skeleton/Sprite Sheets/Skeleton Hit.png" type="Texture" id=4]
 [ext_resource path="res://Assets/Skeleton Sprite Pack/Skeleton/Sprite Sheets/Skeleton Dead.png" type="Texture" id=5]
 [ext_resource path="res://Assets/Skeleton Sprite Pack/Skeleton/Sprite Sheets/Skeleton React.png" type="Texture" id=6]
-[ext_resource path="res://Skeleton.gd" type="Script" id=7]
+[ext_resource path="res://Scripts/Skeleton.gd" type="Script" id=7]
 [ext_resource path="res://Assets/fonts/BalsamiqSans-Bold.ttf" type="DynamicFontData" id=8]
 [ext_resource path="res://Assets/sfx/Skeldeath.mp3" type="AudioStream" id=9]
 [ext_resource path="res://Assets/sfx/Skelweapon.mp3" type="AudioStream" id=10]

@@ -92,7 +92,7 @@ __meta__ = {
 position = Vector2( 790.691, 566.434 )
 scale = Vector2( 3, 3 )
 frames = SubResource( 2 )
-frame = 3
+frame = 1
 playing = true
 
 [node name="Panel" type="Panel" parent="."]
